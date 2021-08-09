@@ -2,4 +2,4 @@
 
 .env
 
-/db
+settings.yaml
