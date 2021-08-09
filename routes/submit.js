@@ -1,11 +1,13 @@
 const express = require("express");
 const router = express.Router();
 
+const Student = require("../models/Student")
+const Class = require("../models/Class")
 router.post("/", async (req, res) => {
   const { name, classes } = req.body;
-
-  console.log(classes);
   if (Array.isArray(classes)) {
+
+    Class.
     res.json({
       success: true,
       data: data,
