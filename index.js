@@ -29,7 +29,7 @@ const main = async () => {
   app.listen(PORT || 4000, () => {
     console.info(`API running on ${PORT || 4000}`);
   });
-  db.default({ classes: JSON.parse(classFile), students: [] });
+  
 };
 
 main();

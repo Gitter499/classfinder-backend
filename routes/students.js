@@ -12,15 +12,7 @@ router.get("/", async (req, res) => {
 });
 router.get("/name", (req, res) => {
   const { name } = req.body;
-  let students;
-  db.get("students")
-    .value()
-    .forEach((elem) => {
-      if (elem.name === name) {
-        students = elem;
-      }
-    });
-  console.log(students);
+ 
   res.json({
     data: students,
   });
