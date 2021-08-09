@@ -1,0 +1,24 @@
+{
+  "name": "classfinder-backend",
+  "version": "0.0.1",
+  "description": "Classfinder API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "prod": "./scripts/setup.sh && yarn start"
+  },
+  "keywords": [],
+  "author": "Rafayel Amirkhanyan",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "stormdb": "^0.5.1"
+  }
+}
