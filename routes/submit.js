@@ -10,9 +10,10 @@ router.post("/", async (req, res) => {
     if (Array.isArray(classes)) {
 
         if (await Student.findOne({name: name})) {
-            res.json({
+            return res.json({
                 message: "Student already exists"
             })
+
         } else {
             await Student.create({
                 name: name,
@@ -33,12 +34,12 @@ router.post("/", async (req, res) => {
 
 
         }
-        res.cookie("studentName", name).json({
+        return res.cookie("studentName", name).json({
             success: true,
             data: data,
         });
     } else {
-        res.json({
+        return res.json({
             success: false,
             message: `TypeError: Classes should be an array. Found ${typeof classes} instead`,
         });

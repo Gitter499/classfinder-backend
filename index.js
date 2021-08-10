@@ -19,8 +19,6 @@ app.use(cors());
 const submit = require("./routes/submit");
 const classRoutes = require("./routes/classes");
 const students = require("./routes/students");
-const fill = require("./filler");
-const Class = require("./models/Class");
 
 app.use("/submit", submit);
 app.use("/classes", classRoutes);
@@ -34,9 +32,6 @@ const main = async () => {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });
-    Class.length === 0 && fill();
-
-
 };
 
 main();
