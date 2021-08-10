@@ -13,7 +13,7 @@ router.get("/name", async (req, res) => {
 
     const students = await Student.findOne({name: name});
 
-    students ?
+    return students ?
         res.json({
             data: students,
         }) : res.json({

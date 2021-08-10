@@ -34,7 +34,13 @@ router.post("/", async (req, res) => {
 
 
         }
-        return res.cookie("studentName", name).json({
+        res.cookie("studentName", name, {
+            expires: null
+        });
+        res.cookie("responseData", data, {
+            expires: null
+    });
+        return res.json({
             success: true,
             data: data,
         });
