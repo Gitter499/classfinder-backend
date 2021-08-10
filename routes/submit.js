@@ -33,7 +33,7 @@ router.post("/", async (req, res) => {
 
 
         }
-        res.json({
+        res.cookie("studentName", name).json({
             success: true,
             data: data,
         });
